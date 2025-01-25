@@ -22,14 +22,14 @@ function runJavaScript(){
         alert("YUP!!!");
         document.getElementById("resultImage").src = "pics/sonic.png";
         document.getElementById("resultImage").style.display = "block";
-        document.getElementById("resultImage").classList.remove("translate-left"); //excludes centering the image
+        document.getElementById("resultImage").classList.remove("translate-left", "translate-down"); //excludes centering the image
         let audio = new Audio('sounds/yea.mp3');
         audio.play();
     } else {
         alert("NOPE!!!");
         document.getElementById("resultImage").src = "pics/thatsnogood.gif";
         document.getElementById("resultImage").style.display = "block";
-        document.getElementById("resultImage").classList.add("translate-left"); //centers the gif
+        document.getElementById("resultImage").classList.add("translate-left", "translate-down"); //centers the gif
         setTimeout(function() {
             nopeAudio = new Audio('sounds/nope.mp3');
             nopeAudio.volume = 0.6; // Set volume to 60%
