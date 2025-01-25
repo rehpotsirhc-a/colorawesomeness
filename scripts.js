@@ -1,6 +1,5 @@
 let nopeAudio;
 let imouttahereAudio;
-let nopeInterval;
 let imouttahereInterval;
 
 function runJavaScript(){
@@ -14,9 +13,6 @@ function runJavaScript(){
         imouttahereAudio.currentTime = 0;
     }
     // Clear the previous intervals if they exist
-    if (nopeInterval) {
-        clearInterval(nopeInterval);
-    }
     if (imouttahereInterval) {
         clearInterval(imouttahereInterval);
     }
