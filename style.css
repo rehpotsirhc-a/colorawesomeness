@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+
+button{
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #000000;
+    background-color: rgb(211, 211, 211);
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(129, 129, 129);
+    color: rgb(255, 255, 255);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.translate-left {
+    transform: translateX(-80px);
+}
