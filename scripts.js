@@ -18,18 +18,23 @@ function runJavaScript(){
     }
 
     let chosencolor = (prompt("Enter your favorite color:")); 
-    if (chosencolor.toLowerCase() === "blue"){
+    if (chosencolor.toLowerCase() === "blue" || chosencolor.toLowerCase() === "green" || chosencolor.toLowerCase() === "red") {
         alert("YUP!!!");
         document.getElementById("resultImage").src = "pics/sonic.png";
         document.getElementById("resultImage").style.display = "block";
-        document.getElementById("resultImage").classList.remove("translate-left", "translate-down"); //excludes centering the image
-        let audio = new Audio('sounds/yea.mp3');
+        document.getElementById("resultImage").classList.add("translate-down1"); //trasnlates still image
+        let audio = new Audio('sounds/stageclear.mp3');
         audio.play();
+        setTimeout(function() {
+            allright = new Audio('sounds/allright.mp3');
+            allright.volume = 1; // Set volume to 100%
+            allright.play();
+        }, 5600); // plays allright.mp3 after 6 seconds
     } else {
         alert("NOPE!!!");
         document.getElementById("resultImage").src = "pics/thatsnogood.gif";
         document.getElementById("resultImage").style.display = "block";
-        document.getElementById("resultImage").classList.add("translate-left", "translate-down"); //centers the gif
+        document.getElementById("resultImage").classList.add("translate-down2"); //translates gif
         setTimeout(function() {
             nopeAudio = new Audio('sounds/nope.mp3');
             nopeAudio.volume = 0.6; // Set volume to 60%
@@ -39,9 +44,6 @@ function runJavaScript(){
         setTimeout(function() {
             imouttahereAudio = new Audio('sounds/imouttahere.mp3');
             imouttahereAudio.play();
-            imouttahereInterval = setInterval(function() {
-                imouttahereAudio.play();
-            }, 5400); // repeats imouttahere.mp3 every 5.4 seconds
         }, 2100); // plays imouttahere.mp3 after 2.1 seconds
     }
 }
